@@ -12,3 +12,8 @@ Todas las tablas del sistema cuentan con una clave primaria (PK) que  identifica
 **`PRENDA`**: Se identifica mediante `Codigo_SKU`.
 **`CATEGORIA`**: Se identifica mediante `ID_Categoria`.
 **`METODO_PAGO`**: Se identifica mediante `ID_Metodo`.
+---
+###Eliminción de Grupos Repetitivos:
+Se evitaron las listas de datos repetitivos dentro de una misma entidad mediante el uso de tablas intermedias con claves primarias compuestas:
+**Detalle prenda por venta (`CONTIENE`):** Para evitar registrar multiples ventas dentro de la misma fila, se creo la tabla intermedia `CONTIENE` . Su clave primaria esta compuesta (`fk_VENTA`, `fk_PRENDA`) y guarda los atributos atómicos `Cantidad` y `Precio_Historico` de cada producto vendido.
+**Multiples metodos de pago (`ABONA_CON`):** Para Permitir que una venta  se pague con mas de un medio de pago sin repetir información en `VENTA`, se diseño la tabla intermedia `ABONA_CON`.Su clave primaria esta compuesta (`fk_METODO_PAGO`, `fk_VENTA`) y guarda el `Monto_Abonado` por cada transacción individual. 
