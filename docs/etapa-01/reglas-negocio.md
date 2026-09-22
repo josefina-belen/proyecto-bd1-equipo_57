@@ -8,4 +8,7 @@ insuficiente.
 RN.03 (Historial de Precios Unitarios): Cada renglón en el detalle de la venta debe
 capturar de forma permanente el precio unitario de la prenda en el instante exacto
 de la operación. Esto asegura que futuros cambios en la lista de precios no afecten
-el total de los comprobantes ya emitidos
+el total de los comprobantes ya emitidos.
+RN.04 (Métodos de Pago): Es obligatorio registrar en el comprobante el método de
+pago utilizado por el cliente para saldar la venta (Efectivo, Débito, Crédito o
+Transferencia).
