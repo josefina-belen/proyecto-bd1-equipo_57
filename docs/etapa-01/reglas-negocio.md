@@ -12,3 +12,7 @@ el total de los comprobantes ya emitidos.
 RN.04 (Métodos de Pago): Es obligatorio registrar en el comprobante el método de
 pago utilizado por el cliente para saldar la venta (Efectivo, Débito, Crédito o
 Transferencia).
+RN.05 (Estructura de la Venta): Un comprobante de venta se emite para un único
+cliente y debe contener, como mínimo, un renglón de detalle (la compra de al menos
+una prenda) para considerarse válido.
+
