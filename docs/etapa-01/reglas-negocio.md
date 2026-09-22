@@ -15,4 +15,7 @@ Transferencia).
 RN.05 (Estructura de la Venta): Un comprobante de venta se emite para un único
 cliente y debe contener, como mínimo, un renglón de detalle (la compra de al menos
 una prenda) para considerarse válido.
+RN.06 (Variantes de Producto): El sistema debe considerar como artículos distintos
+a nivel de stock a aquellas prendas que, compartiendo el mismo modelo, difieran en
+su talle o color.
 
