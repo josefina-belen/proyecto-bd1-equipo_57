@@ -15,3 +15,12 @@ _____________________________________________
 ## Gestión de Pagos Multiples (`ABONA_CON`)
 **Decisión:** La relación `VENTA` y `METODO_PAGO` se resolvió mediante la tabla intermedia `ABONA_CON` con clave primaria compuesta (`fk_METODO_PAGO`, `fk_VENTA`).
 •Se ortorgo una flexibilidad operativa al negocio, por eso permite que una misma venta sea saldada utilizando mas de un medio de pago **(Efectivo o Tarjeta)**.
+_____________________________________________
+## Selecciones de Tipos de Datos e Identificadores
+## Claves Primarias (PK) númericas:
+**Se eligio** `INT` para los identificadores principales (`DNI`, `Nro_Comprobante`, `Codigo_SKU`, `ID_Categoria`, `ID_Metodo`). 
+## Atributos Monetarios (`NUNERIC / DECIMAL`):
+**Los campos** `Precio_Actual`, `Precio_Historico` y `Monto_Abonado` fueron definidos con tipo numérico de precisión fija **(`NUMERIC(10)`)**.
+## Telefono (`NUMERIC`):
+**El atributo** `Telofono` de la tabla `CLIENTE` se definio como numérico de 19 digitos **(`NUMERIC(10)`)**.
+•Con ello se asegura espacio suficiente para códigos de área y números sin caracteres especiales.
