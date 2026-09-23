@@ -1,4 +1,4 @@
-# Decisiones de Diseño - Sistema de Gestión de Indumentaria
+# Decisiones de Diseño
 
 Este documento detalla las principales decisiones arquitectónicas y de modelado relacional tomadas para garantizar la integridad, consistencia y escalabilidad de la base de datos.
 
