@@ -21,3 +21,6 @@
 https://github.com/josefina-belen/proyecto-bd1-equipo_57/blob/main/docs/etapa-02/Normalizacion.md
 
 https://github.com/josefina-belen/proyecto-bd1-equipo_57/blob/main/docs/etapa-02/Decisiones-diseno.md
+
+## Reflexión
+•**Desarrolle una comprensión solida del concepto de `atomicidad` y la importancia de eliminar grupos repetitivos en la Primera Forma Normal (`1FN`)**
