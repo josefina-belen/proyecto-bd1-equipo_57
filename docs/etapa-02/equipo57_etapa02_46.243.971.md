@@ -19,3 +19,5 @@
 ## Evidencia:
 
 https://github.com/josefina-belen/proyecto-bd1-equipo_57/blob/main/docs/etapa-02/Normalizacion.md
+
+https://github.com/josefina-belen/proyecto-bd1-equipo_57/blob/main/docs/etapa-02/Decisiones-diseno.md
