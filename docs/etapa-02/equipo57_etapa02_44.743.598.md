@@ -19,7 +19,7 @@ Revisando el DER original, vi que no contemplaba el detalle de la ubicación de 
 Edité el DER agregando `Direccion` (como atributo compuesto) a la entidad `Cliente`, y sumé `Monto_Abonado` a la relación `Abona_con`. Después, me aseguré de que todas estas soluciones se tradujeran correctamente y sin errores al Modelo Relacional final.
 
 ### 5. Evidencias en el repositorio
-* **Mis commits:** [Ver historial de commits de Aldana](https://github.com/josefina-belen/proyecto-bd1-equipo_57/commits/main/?author=danazalazar)
+* **Mis commits:** https://github.com/josefina-belen/proyecto-bd1-equipo_57/commits/main/?author=danazalazar
 * **Archivo del diagrama subido:** [docs/etapa-02/modelo-relacional.md](docs/etapa-02/modelo-relacional.md)
 
 ### 6. Reflexión individual
