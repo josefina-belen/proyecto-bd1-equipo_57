@@ -24,3 +24,6 @@ _____________________________________________
 ## Telefono (`NUMERIC`):
 **El atributo** `Telofono` de la tabla `CLIENTE` se definio como numérico de 19 digitos **(`NUMERIC(10)`)**.
 •Con ello se asegura espacio suficiente para códigos de área y números sin caracteres especiales.
+_____________________________________________
+## Integridad Referencial
+**Foreing Keys (FK):** Todas las relaciones entre tablas principales y secundarias se implementan mediante claves foráneas que apuntan directamenten a la Clave Primaria de la tabla origen. Ej: (`fk_CLIENTE` en `VENTA` apuntando a `DNI` en `CLIENTE`).
