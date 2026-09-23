@@ -16,4 +16,6 @@
 ## Soluciones:
 •**Se Propuso** transformar el atributo compuesto `Dirección` en tres atributos atómicos independientes (`Calle`, `AlturaA`, `Localidad`) en la tabla `CLIENTE`.
 •**Se Valido** el uso de clave primarias compuestas en las tablas intermedias.
+## Evidencia:
+https://github.com/josefina-belen/proyecto-bd1-equipo_57/commit/4bfce54e31d35e2d8e814189f113314ad9106e09
 
