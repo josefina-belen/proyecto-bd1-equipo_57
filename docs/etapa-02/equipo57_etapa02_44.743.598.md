@@ -2,7 +2,7 @@
 
 - **Equipo:** 57 
 - **Integrante:** Aldana Georgina Zalazar
-- **Fecha:** 22/09/2026
+- **Fecha:** 23/09/2026
 
 ---
 
