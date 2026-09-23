@@ -20,7 +20,7 @@ Edité el DER agregando `Direccion` (como atributo compuesto) a la entidad `Clie
 
 ### 5. Evidencias en el repositorio
 * **Mis commits:** https://github.com/josefina-belen/proyecto-bd1-equipo_57/commits/main/?author=danazalazar
-* **Archivo del diagrama subido:** [docs/etapa-02/modelo-relacional.md](docs/etapa-02/modelo-relacional.md)
+* **Archivo del diagrama subido:** [docs/etapa-02/modelo-relacional.md](/docs/etapa-02/modelo-relacional.md)
 
 ### 6. Reflexión individual
 Al realizar el Modelo Relacional, me di cuenta de la importancia de traducir cada entidad y relación a tablas con sus respectivas PK y FK para que la estructura sea sólida. Entendí que el trabajo en equipo no es solo hacer mi parte, sino aprender a revisar lo que hace mi compañero para ver si está bien y proponer correcciones. Además, me sirvió para agarrarle la mano a GitHub y aprender a registrar mis cambios con commits.
