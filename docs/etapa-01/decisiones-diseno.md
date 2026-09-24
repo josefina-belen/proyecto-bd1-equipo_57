@@ -1,13 +1,18 @@
 # Decisiones de Diseño
 
-**1. Precios fijos en las ventas viejas**
-Decidimos anotar el precio de la ropa directamente adentro del detalle de la venta. Si no hacíamos esto, el día que actualicemos los precios en el local se nos iban a cambiar automáticamente los montos de los tickets viejos y el historial contable nos iba a dar cualquier cosa.
+En base a las reglas de negocio que armamos para el local, dejamos anotadas las decisiones más importantes que tomamos para el sistema:
 
-**2. Controlar el stock exacto**
-En la tabla de prendas pusimos el codigo_sku como clave principal. Esto sirve para diferenciar la ropa exacta (por ejemplo, remera negra talle M). Así nos aseguramos de que cuando se venda algo, se descuente el stock de esa variante específica y no de un modelo en general.
+**1. Clientes registrados por DNI**
+Decidimos usar el DNI como el identificador principal y obligatorio para cargar a los clientes. De esta forma nos aseguramos de que cada ticket quede asociado a una persona real y no haya duplicados.
 
-**3. Evitar renglones repetidos en el ticket**
-En el detalle de la venta, la clave primaria está formada por dos cosas juntas: el número de ticket y el código del producto. Esto obliga al sistema a no dejarte cargar la misma prenda en dos renglones separados. Si el cliente lleva dos remeras iguales, directamente se suma un "2" en la columna de cantidad.
+**2. Control de stock por variante exacta**
+Para que el inventario no sea un desastre, el sistema va a tratar como productos distintos a las prendas que tengan diferente talle o color, aunque sean del mismo modelo. Así, cuando se venda algo, se descuenta exactamente esa remera o pantalón y evitamos vender cosas que ya no quedan en el local.
 
-**4. Tablas aparte para no repetir texto (3FN)**
-Para cumplir con la normalización (3FN), sacamos cosas como las categorías de la ropa y los métodos de pago a tablitas separadas. En vez de escribir la palabra "Tarjeta de débito" repetida en miles de ventas, solo guardamos su ID. Esto evita errores de tipeo y hace que la base de datos sea más limpia.
+**3. Precios fijos en tickets viejos**
+Una decisión clave fue guardar el precio unitario de la prenda en el mismo momento que se hace la venta. Si no hacíamos esto, el día de mañana actualizan los precios de la ropa y se nos cambian los totales de todos los comprobantes viejos.
+
+**4. Mantener el sistema simple (alcance)**
+Nos apegamos a los requerimientos: el sistema es solo para gestionar las ventas y el catálogo. Decidimos dejar afuera todo lo que sea compras a proveedores, manejo de envíos o devoluciones porque no entran en el alcance de este proyecto.
+
+**5. Requisitos para cobrar una venta**
+Para que un ticket sea válido, sí o sí tiene que tener registrado cómo pagó el cliente (efectivo, débito, crédito o transferencia) y tener cargada por lo menos una prenda. El sistema no va a permitir guardar comprobantes vacíos.
