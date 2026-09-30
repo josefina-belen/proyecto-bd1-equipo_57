@@ -13,3 +13,7 @@ VALUES (9999, 'M', 'Blanco', 1500.00, -5, 'Remera Fallada', 1);
 -- Resultado Esperado: Error 547 (Conflicto con la restricción CHECK 'CHK_CONTIENE_Precio_Historico')
 INSERT INTO CONTIENE (Nro_Comprobante, Codigo_SKU, Precio_Historico, Cantidad)
 VALUED (1, 1002, 0.00, 1);
+
+-- Unicidad de Categorias (UNIQUE)
+-- Resultado Esperado: Error 2627 (Infracción de UNIQUE KEY, **'Remeras'** ya existe)
+INSERT INTO CATEGORIA (Nombre) VALUES (**'Remeras'**);
