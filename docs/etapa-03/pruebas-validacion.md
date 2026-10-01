@@ -2,7 +2,7 @@
 
 USE PROYECTO;
 
---1. RESTRICCIONES DE DOMINIO ( CHECK y UNIQUE)
+--1. PRUEBA DE RESTRICCIONES DE DOMINIO ( CHECK y UNIQUE)
 
 -- Bloqueo de Stock Negativo
 -- Resultado Esperado: Error 547 (Conflicto con la restricción CHECK 'CHK_PRENDA_Stock')
@@ -15,5 +15,5 @@ INSERT INTO CONTIENE (Nro_Comprobante, Codigo_SKU, Precio_Historico, Cantidad)
 VALUED (1, 1002, 0.00, 1);
 
 -- Unicidad de Categorias (UNIQUE)
--- Resultado Esperado: Error 2627 (Infracción de UNIQUE KEY, **'Remeras'** ya existe)
-INSERT INTO CATEGORIA (Nombre) VALUES (**'Remeras'**);
+-- Resultado Esperado: Error 2627 (Infracción de UNIQUE KEY, 'Remeras' ya existe)
+INSERT INTO CATEGORIA (Nombre) VALUES ('Remeras');
