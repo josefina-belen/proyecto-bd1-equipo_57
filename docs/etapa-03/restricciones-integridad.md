@@ -22,3 +22,8 @@ Las reglas de las claves foráneas (FOREIGN KEY) definen cómo reacciona el moto
     *   De `CLIENTE` a `VENTA`: El sistema impedirá eliminar a un cliente si este ya tiene compras registradas, preservando el historial contable de la tienda.
     *   De `CATEGORIA` a `PRENDA`: No se permitirá borrar una categoría si existen prendas de ropa asociadas a la misma.
     *   De `METODO_PAGO` a `ABONA_CON`: Evita borrar un método de pago si ya fue utilizado en transacciones pasadas.
+
+## 3. Integridad de Entidad (PRIMARY KEY e IDENTITY)
+
+*   Todas las tablas poseen una `PRIMARY KEY` explícita que garantiza la unicidad de cada fila y evita valores nulos en los identificadores.
+*   Se delegó al motor de base de datos la generación de claves subrogadas usando `IDENTITY(1,1)` en `ID_Categoria`, `ID_Metodo` y `Nro_Comprobante`, evitando colisiones de concurrencia al momento de insertar registros simultáneos en la tienda.
