@@ -5,9 +5,11 @@
 
 CREATE DATABASE PROYECTO;
 GO
+
 USE PROYECTO;
 GO
 
+-- 1. Tablas de Catálogos y Entidades Principales
 CREATE TABLE METODO_PAGO
 (
   ID_Metodo INT IDENTITY(1,1) NOT NULL, 
@@ -17,7 +19,7 @@ CREATE TABLE METODO_PAGO
 
 CREATE TABLE CLIENTE
 (
-  DNI INT NOT NULL, -- NO lleva IDENTITY (es un dato real)
+  DNI INT NOT NULL, 
   Nombre VARCHAR(50) NOT NULL,
   Apellido VARCHAR(50) NOT NULL,
   Telefono VARCHAR(20) NOT NULL,
@@ -27,6 +29,14 @@ CREATE TABLE CLIENTE
   CONSTRAINT PK_CLIENTE_DNI PRIMARY KEY (DNI)
 );
 
+CREATE TABLE CATEGORIA
+(
+  ID_Categoria INT IDENTITY(1,1) NOT NULL, 
+  Nombre VARCHAR(50) NOT NULL UNIQUE, 
+  CONSTRAINT PK_C_ID_Categoria PRIMARY KEY (ID_Categoria)
+);
+
+-- 2. Entidades Transaccionales y de Producto
 CREATE TABLE VENTA
 (
   Nro_Comprobante INT IDENTITY(1,1) NOT NULL, 
@@ -37,13 +47,6 @@ CREATE TABLE VENTA
     ON DELETE NO ACTION
     ON UPDATE CASCADE, 
   CONSTRAINT CHK_VENTA_Fecha CHECK (Fecha <= GETDATE())
-);
-
-CREATE TABLE CATEGORIA
-(
-  ID_Categoria INT IDENTITY(1,1) NOT NULL, 
-  Nombre VARCHAR(50) NOT NULL UNIQUE, 
-  CONSTRAINT PK_C_ID_Categoria PRIMARY KEY (ID_Categoria)
 );
 
 CREATE TABLE PRENDA
@@ -62,6 +65,7 @@ CREATE TABLE PRENDA
   CONSTRAINT CHK_PRENDA_Precio_Actual CHECK (Precio_Actual > 0)
 );
 
+-- 3. Tablas Intermedias (Detalles)
 CREATE TABLE ABONA_CON
 (
   ID_Metodo INT NOT NULL,
@@ -73,7 +77,7 @@ CREATE TABLE ABONA_CON
     ON UPDATE CASCADE,
   CONSTRAINT FK_ABONA_CON_Nro_Comprobante FOREIGN KEY (Nro_Comprobante) REFERENCES VENTA(Nro_Comprobante)
     ON DELETE CASCADE
-    ON UPDATE CASCADE, -- Faltaba una coma aquí en tu script original
+    ON UPDATE CASCADE, 
   CONSTRAINT CHK_ABONA_CON_Monto_Abonado CHECK (Monto_Abonado > 0)
 );
 
@@ -89,8 +93,7 @@ CREATE TABLE CONTIENE
     ON UPDATE CASCADE,
   CONSTRAINT FK_CONTIENE_Codigo_SKU FOREIGN KEY (Codigo_SKU) REFERENCES PRENDA(Codigo_SKU)
     ON DELETE NO ACTION
-    ON UPDATE CASCADE, -- Faltaba una coma aquí en tu script original
+    ON UPDATE CASCADE, 
   CONSTRAINT CHK_CONTIENE_Precio_Historico CHECK (Precio_Historico > 0),
   CONSTRAINT CHK_CONTIENE_Cantidad CHECK (Cantidad > 0)
 );
-
