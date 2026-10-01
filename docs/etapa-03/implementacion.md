@@ -24,4 +24,3 @@ Resuelven las relaciones de "muchos a muchos" mediante claves primarias compuest
 
 
 
-e y que las relaciones entre PKs y FKs coincidan.
