@@ -21,6 +21,20 @@ Dependen directamente de los catálogos para su creación.
 Resuelven las relaciones de "muchos a muchos" mediante claves primarias compuestas y eliminaciones en cascada (`ON DELETE CASCADE`) vinculadas al comprobante.
 * **CONTIENE (Detalle de Venta):** Vincula una venta con los SKU comprados. Registra la cantidad y congela el "Precio Histórico" al momento de la compra para que futuros cambios de precio en la tabla `PRENDA` no alteren facturas pasadas.
 * **ABONA_CON (Detalle de Pago):** Permite que una única venta se pague combinando diferentes métodos (ej. parte en efectivo, parte con tarjeta). Registra el ID del método y el monto parcial abonado.
+## 2. Inserción de Datos (Script DML)
+
+La carga inicial de registros se realiza respetando el orden de dependencias de las Claves Foráneas para evitar errores de integridad.
+
+1. **Carga sin dependencias:** Se inicializan primero `METODO_PAGO`, `CATEGORIA` y `CLIENTE`.
+2. **Carga con dependencias simples:** Se insertan las `PRENDAS` (asignándoles las categorías creadas en el paso 1) y las cabeceras de `VENTA` (asignándolas a los DNIs de los clientes del paso 1).
+3. **Carga de tablas intermedias:** Finalmente, se insertan los detalles en `CONTIENE` y los pagos en `ABONA_CON`, vinculando los números de comprobante de venta con los SKU y métodos de pago correspondientes.
+
+---
+
+## 3. Consultas de Verificación
+
+Al final del script de implementación, se ejecutan sentencias `SELECT *` sobre cada una de las 7 tablas creadas. Esto permite auditar de forma rápida que la inserción de datos masiva se haya completado correctamente y que las relaciones entre PKs y FKs coincidan.
+
 
 
 
