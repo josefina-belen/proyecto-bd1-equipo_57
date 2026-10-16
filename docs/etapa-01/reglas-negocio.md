@@ -22,6 +22,6 @@ Es obligatorio registrar en el comprobante el método de pago utilizado por el c
 
 Un comprobante de venta se emite para un único cliente y debe contener como mínimo un renglón de detalle (al menos una prenda) para ser válido.
 
-## RN.06 — Variantes de Producto
+## RN.06 — Variantes de Prenda
 
-El sistema considera como artículos distintos a nivel de stock a las prendas que, compartiendo el mismo modelo, difieran en talle o color. Ejemplo: una remera talle M color negro y talle M color blanco son dos artículos con stock independiente.
+El sistema considera como prendas distintas a nivel de stock a las que, compartiendo el mismo modelo, difieran en talle o color. Ejemplo: una remera talle M color negro y talle M color blanco son dos prendas con stock independiente.
