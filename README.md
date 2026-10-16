@@ -76,9 +76,9 @@ Las relaciones entre las entidades se implementan mediante claves primarias y fo
 
 ### Normalización
 
-- [Primera Forma Normal (1FN)](docs/etapa-02/normalizacion.md#primera-forma-normal-1fn)
-- [Segunda Forma Normal (2FN)](docs/etapa-02/normalizacion.md#segunda-forma-normal-2fn)
-- [Tercera Forma Normal (3FN)](docs/etapa-02/normalizacion.md#tercera-forma-normal-3fn)
+- [Primera Forma Normal (1FN)](https://github.com/josefina-belen/proyecto-bd1-equipo_57/blob/main/docs/etapa-02/Normalizacion.md#1-primera-forma-normal-1fn)
+- [Segunda Forma Normal (2FN)](https://github.com/josefina-belen/proyecto-bd1-equipo_57/blob/main/docs/etapa-02/Normalizacion.md#segunda-forma-normal-2fn)
+- [Tercera Forma Normal (3FN)](https://github.com/josefina-belen/proyecto-bd1-equipo_57/blob/main/docs/etapa-02/Normalizacion.md#tercera-forma-normal-3fn)
 
 
 ## Tecnologías
