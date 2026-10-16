@@ -19,10 +19,10 @@ _____________________________________________
 ## Selecciones de Tipos de Datos e Identificadores
 ## Claves Primarias (PK) númericas:
 **Se eligio** `INT` para los identificadores principales (`DNI`, `Nro_Comprobante`, `Codigo_SKU`, `ID_Categoria`, `ID_Metodo`). 
-## Atributos Monetarios (`NUNERIC / DECIMAL`):
-**Los campos** `Precio_Actual`, `Precio_Historico` y `Monto_Abonado` fueron definidos con tipo numérico de precisión fija **(`NUMERIC(10)`)**.
+## Atributos Monetarios:
+**Los campos** `Precio_Actual`, `Precio_Historico` y `Monto_Abonado` fueron definidos con tipo numérico de precisión fija **(`DECIMAL (10,2)`)**.
 ## Telefono (`NUMERIC`):
-**El atributo** `Telofono` de la tabla `CLIENTE` se definio como numérico de 19 digitos **(`NUMERIC(10)`)**.
+**El atributo** `Telofono` de la tabla `CLIENTE` se definio como numérico de 19 digitos **(`VARCHAR (20)`)**.
 •Con ello se asegura espacio suficiente para códigos de área y números sin caracteres especiales.
 _____________________________________________
 ## Integridad Referencial
