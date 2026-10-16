@@ -1,8 +1,3 @@
--- ============================================================
--- Etapa IV - Consulta 3: Consulta de negocio avanzada
--- Clientes cuyo gasto total supera el gasto promedio por cliente
--- Proyecto: Estilo Urbano (Equipo 57) - Motor: SQL Server
--- ============================================================
 USE PROYECTO;
 GO
 
