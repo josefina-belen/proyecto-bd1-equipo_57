@@ -2,7 +2,7 @@
 
 **Script:** `sql/consultas/consulta_avanzada.sql`
 
-## Necesidad de información que resuelve
+## Necesidad de información que cubra necesidades
 Identificar a los clientes más valiosos (los que gastaron más que el cliente promedio) para acciones de fidelización, como descuentos o avisos de nuevos ingresos.
 
 ## Estrategia SQL
