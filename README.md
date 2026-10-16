@@ -68,10 +68,18 @@ El esquema relacional se compone de siete tablas:
 Las relaciones entre las entidades se implementan mediante claves primarias y foráneas. Las tablas `CONTIENE` y `ABONA_CON` permiten representar relaciones de muchos a muchos.
 
 ### Diagrama entidad-relación
+![`docs/etapa-02/der/der.png`](docs/etapa-02/der/der.png)
 
-El diagrama del modelo se encuentra en:
+### Modelo relacional
+<img width="1498" height="565" alt="image" src="https://github.com/user-attachments/assets/45870dfc-1b68-4fa4-8f7b-2911e0215473" />
 
-[`docs/etapa-02/der/der.png`](docs/etapa-02/der/der.png)
+
+### Normalización
+
+- [Primera Forma Normal (1FN)](docs/etapa-02/normalizacion.md#primera-forma-normal-1fn)
+- [Segunda Forma Normal (2FN)](docs/etapa-02/normalizacion.md#segunda-forma-normal-2fn)
+- [Tercera Forma Normal (3FN)](docs/etapa-02/normalizacion.md#tercera-forma-normal-3fn)
+
 
 ## Tecnologías
 
