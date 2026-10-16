@@ -25,7 +25,7 @@ INSERT INTO CATEGORIA (Nombre) VALUES
 ('Vestidos');
 
 -- Carga de Clientes 
-INSERT INTO CLIENTE (DNI, Nombre, Apellido, Telefono, Calle, Altura, Localidad) VALUES
+INSERT INTO CLIENTE (Dni, Nombre, Apellido, Telefono, Calle, Altura, Localidad) VALUES
 (30111222, 'Juan', 'Perez', '3794111111', 'Junin', 1200, 'Corrientes'),
 (31222333, 'Maria', 'Gomez', '3794222222', 'San Martin', 850, 'Corrientes'),
 (32333444, 'Carlos', 'Lopez', '3624333333', 'Av. Alberdi', 150, 'Resistencia'),
@@ -39,7 +39,7 @@ INSERT INTO CLIENTE (DNI, Nombre, Apellido, Telefono, Calle, Altura, Localidad) 
 -- 2. TABLAS CON DEPENDENCIAS SIMPLES
 
 -- Carga de Prendas (Depende de Categoría. El ID_Categoria del 1 al 8 ya existe)
-INSERT INTO PRENDA (Codigo_SKU, Talle, Color, Precio_Actual, Stock, Modelo, ID_Categoria) VALUES
+INSERT INTO PRENDA (CodigoSku, Talle, Color, PrecioActual, Stock, Modelo, IdCategoria) VALUES
 (1001, 'M', 'Blanco', 15000.00, 20, 'Remera Basic', 1),
 (1002, 'L', 'Negro', 15000.00, 15, 'Remera Basic', 1),
 (1003, '42', 'Azul', 45000.00, 10, 'Jean Classic', 2),
@@ -50,7 +50,7 @@ INSERT INTO PRENDA (Codigo_SKU, Talle, Color, Precio_Actual, Stock, Modelo, ID_C
 (1008, 'L', 'Floreado', 25000.00, 7, 'Vestido Verano', 8);
 
 -- Carga de Ventas (Depende de Cliente. Usamos los DNI creados antes)
-INSERT INTO VENTA (Fecha, DNI) VALUES
+INSERT INTO VENTA (Fecha, Dni) VALUES
 ('2026-09-01 10:30:00', 30111222),
 ('2026-09-05 15:45:00', 31222333),
 ('2026-09-10 09:15:00', 32333444),
@@ -64,7 +64,7 @@ INSERT INTO VENTA (Fecha, DNI) VALUES
 -- 3. TABLAS INTERMEDIAS 
 
 -- Carga de Detalles de Venta (CONTIENE)
-INSERT INTO CONTIENE (Nro_Comprobante, Codigo_SKU, Precio_Historico, Cantidad) VALUES
+INSERT INTO CONTIENE (NroComprobante, CodigoSku, PrecioHistorico, Cantidad) VALUES
 (1, 1001, 15000.00, 1), 
 (2, 1003, 45000.00, 1), 
 (3, 1004, 35000.00, 1), 
@@ -76,7 +76,7 @@ INSERT INTO CONTIENE (Nro_Comprobante, Codigo_SKU, Precio_Historico, Cantidad) V
 
 -- Carga de Pagos (ABONA_CON)
 -- Relaciona el método de pago con el comprobante y el monto final abonado.
-INSERT INTO ABONA_CON (ID_Metodo, Nro_Comprobante, Monto_Abonado) VALUES
+INSERT INTO ABONA_CON (IdMetodo, NroComprobante, MontoAbonado) VALUES
 (1, 1, 15000.00), -- Efectivo
 (2, 2, 45000.00), -- Tarjeta Visa
 (6, 3, 35000.00), -- Mercado Pago
