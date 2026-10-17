@@ -1,5 +1,5 @@
 
-# Contribución Grupal — Etapa 4
+# Contribución Individual — Etapa 4
 
 **Equipo:** 57  
 **Integrantes:** Romero, Josefina Belén y Zalazar, Aldana Georgina  
@@ -36,6 +36,7 @@ Se implementaron las funciones de agregación `COUNT(DISTINCT ...)` y `SUM(...)`
 ## Evidencia
 
 https://github.com/josefina-belen/proyecto-bd1-equipo_57/blob/main/docs/etapa-04/informe-ventas.md
+https://github.com/josefina-belen/proyecto-bd1-equipo_57/blob/main/docs/etapa-04/casos-uso.md
 
 ---
 
