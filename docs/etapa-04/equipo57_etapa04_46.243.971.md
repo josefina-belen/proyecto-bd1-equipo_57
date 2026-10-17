@@ -14,7 +14,7 @@ Encargado de Realizar  en conjunto el archivo **comprobante-venta.md** con **Tol
 
 ## 2.Decisiones en las que Participe:
 Se penso y decidio realizar como calculariamos la plata ( Subtotales y total final a pagar)
-usando las matemáticas de SQL para asegurar que se mezclen  los renglones en la lista con la ropa  que llevo el cliente.
+usando las matemáticas de SQL para asegurar que no se mezclen  los renglones en la lista con la ropa  que llevo el cliente.
 
 ## 3. Problemas o dificultades identificadas:
 Tuvimos unos problemas  de sintaxis por algunos errores cometidos anteriormente en algunos comandos y nombres mal definidos.
