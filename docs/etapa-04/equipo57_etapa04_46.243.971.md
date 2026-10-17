@@ -22,6 +22,11 @@ Tuvimos unos problemas  de sintaxis por algunos errores cometidos anteriormente 
 ## 4. Solución o Propuesta Realizada:
 Para solucionar  se fue identificando  los mensajes de error que devolvía la consola del motor SQL. Tambien verificamos lo  realizado en el archivo DDL para corregir los nombres mal definidos  anteriomente que daban errores de sintaxis.
 
+## 5.Evidencia:
+https://github.com/josefina-belen/proyecto-bd1-equipo_57/blob/main/docs/etapa-04/comprobante-venta.md
+
+## 6. Reflexión Individual:
+En esta etapa entendí el funcionamiento del comando **SELECT**. También me sirvió para comprender la importancia de mantener una coherencia entre el diseño, la documentación y el código. Ver todo integrado y ordenado en conjunto  para su funcionamiento correcto. 
 
 
 
