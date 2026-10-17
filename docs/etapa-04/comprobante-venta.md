@@ -13,3 +13,7 @@
 
 3. **Filtrado:**
     La cláusula `WHERE V.NroComprobante = 1` permite aislar y consultar el comprobante de una venta en particular (funciona como parámetro para buscar una factura específica).
+
+## SCRIPT SQL
+   <img width="795" height="425" alt="image" src="https://github.com/user-attachments/assets/6470972b-dd2f-4859-af01-be23e2322bbe" />
+
