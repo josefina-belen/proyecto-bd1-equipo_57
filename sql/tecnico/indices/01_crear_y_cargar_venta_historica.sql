@@ -1,11 +1,3 @@
-/* ============================================================
-   ETAPA V - Optimizacion de consultas con indices
-   Paso 1: tabla de pruebas con 1.000.000 de registros
-   La tabla VENTA_HISTORICA replica el modelo de VENTA/CONTIENE
-   (fecha, cliente, total) pero es independiente: no toca los
-   datos reales ni dispara los triggers del sistema.
-   Se crea SIN indices (heap) a proposito.
-   ============================================================ */
 USE PROYECTO;
 GO
 
@@ -25,7 +17,6 @@ GO
 SET NOCOUNT ON;
 GO
 
--- Carga masiva: fechas entre 2020-01-01 y 2024-12-30, 50.000 DNI distintos
 WITH Numeros AS
 (
     SELECT TOP (1000000)
@@ -40,7 +31,6 @@ SELECT DATEADD(DAY, ABS(CHECKSUM(NEWID())) % 1825, '2020-01-01'),
 FROM Numeros;
 GO
 
--- Verificacion
 SELECT COUNT(*) AS CantidadRegistros,
        MIN(Fecha) AS Fecha_Min,
        MAX(Fecha) AS Fecha_Max
