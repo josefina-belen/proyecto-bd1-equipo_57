@@ -1,9 +1,20 @@
-# Estilo Urbano — Sistema de Gestión de Ventas
+<div align="center">
 
-**Proyecto académico de Bases de Datos I · Equipo 57**
+![Materia](https://img.shields.io/badge/-Base_de_Datos_I-blue)
+![Proyecto](https://img.shields.io/badge/-Proyecto_Integrador_2026-yellow)
+![Grupo](https://img.shields.io/badge/-Grupo_57-purple)
+![Comisión](https://img.shields.io/badge/-Comisión_3-green)
+
+# 👕 Estilo Urbano
+### Sistema de Gestión de Ventas
+
+<br>
+</div>
 
 
-## Integrantes:
+
+
+### Integrantes:
 * ![Juan](https://img.shields.io/badge/-Juan_Francisco_Maidana_Medina-blue)
 * ![Aldana](https://img.shields.io/badge/-Zalazar_Aldana_Georgina-orange)
 * ![Josefina](https://img.shields.io/badge/-Romero_Josefina_Belén-blueviolet)
