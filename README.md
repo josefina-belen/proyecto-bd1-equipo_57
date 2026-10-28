@@ -1,9 +1,14 @@
 # Estilo Urbano — Sistema de Gestión de Ventas
 
-**Proyecto académico de Bases de Datos I · Equipo 57
+**Proyecto académico de Bases de Datos I · Equipo 57**
 
-**
-Integrantes: 
+
+## Integrantes:
+* ![Juan](https://img.shields.io/badge/-Juan_Francisco_Maidana_Medina-blue)
+* ![Aldana](https://img.shields.io/badge/-Zalazar_Aldana_Georgina-orange)
+* ![Josefina](https://img.shields.io/badge/-Romero_Josefina_Belén-blueviolet)
+* ![Alessandro](https://img.shields.io/badge/-Rivero_Alessandro_Sebastián-red)
+* ![Pablo](https://img.shields.io/badge/-Toledo_Pablo_Elías-green)
 
 Sistema de base de datos relacional diseñado para gestionar las operaciones principales de una tienda de indumentaria: clientes, catálogo de prendas, inventario, ventas y medios de pago.
 
