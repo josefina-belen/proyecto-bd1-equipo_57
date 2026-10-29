@@ -1,4 +1,4 @@
-# Etapa 5 – Triggers de auditoría
+# Triggers de auditoría
 
 **Proyecto:** Estilo Urbano – Sistema de Gestión de Ventas 
 
