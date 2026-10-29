@@ -1,8 +1,6 @@
 -- =====================================================================
--- scripts.sql - TRIGGERS DE AUDITORÍA - Estilo Urbano - Equipo 57
 --   PARTE 1: tablas de auditoría y triggers (instalación)
 --   PARTE 2: script de demostración (pruebas 1 a 7 + consultas de auditoría)
--- Orden de ejecución: crear_bd.sql -> datos_prueba.sql -> PARTE 1 -> PARTE 2
 -- =====================================================================
 
 -- #####################################################################
@@ -10,19 +8,10 @@
 -- #####################################################################
 
 -- =====================================================================
--- ETAPA V - TEMA TÉCNICO: TRIGGERS DE AUDITORÍA
--- Proyecto : Estilo Urbano - Sistema de Gestión de Ventas
--- Equipo 57 - Bases de Datos I
--- Motor    : SQL Server (requiere 2016 SP1 o superior por CREATE OR ALTER)
 -- Requiere : haber ejecutado antes sql/ddl/crear_bd.sql
 -- Pruebas  : PARTE 2 de este mismo archivo
---
--- OJO: al instalar trg_VENTA_BloquearDelete, el DELETE sobre VENTA queda
--- bloqueado. La prueba "ON DELETE CASCADE" de
--- sql/pruebas_de_validacion/01_pruebas.sql debe ejecutarse ANTES de
--- instalar estos triggers (o con el trigger deshabilitado, ver el final
--- de este archivo).
---
+
+
 -- QUÉ HACE ESTE SCRIPT
 --   1) Crea dos tablas de auditoría: AUDITORIA_PRENDA y AUDITORIA_CLIENTE.
 --   2) Crea 4 triggers AFTER que guardan el registro ANTES del cambio
@@ -122,8 +111,7 @@ GO
 --
 -- Notas de diseño:
 --  * Son triggers AFTER: se ejecutan cuando el UPDATE/DELETE ya pasó
---    todas las restricciones (CHECK, FK). Si la operación falla por una
---    restricción, no se audita porque el cambio nunca ocurrió.
+--    todas las restricciones (CHECK, FK). 
 --  * Son SET-BASED (sin variables): un UPDATE/DELETE que afecta varias
 --    filas dispara el trigger UNA sola vez y genera una fila de auditoría
 --    por cada registro afectado.
@@ -131,9 +119,7 @@ GO
 --    'inserted' = imagen de las filas DESPUÉS del cambio.
 --  * Se usa LEFT JOIN deleted -> inserted por la clave primaria para que
 --    TODA fila modificada quede auditada, incluso si cambia la propia PK
---    (en ese caso las columnas *_Nuevo quedan en NULL).
---  * ORIGINAL_LOGIN() devuelve el login real de la conexión, aunque la
---    sesión use EXECUTE AS (SUSER_SNAME() devolvería el suplantado).
+--  * ORIGINAL_LOGIN() devuelve el login real de la conexión
 --    USER_NAME() devuelve el usuario de la base de datos.
 -- =====================================================================
 
@@ -281,25 +267,11 @@ GO
 -- #####################################################################
 
 -- =====================================================================
--- ETAPA V - TRIGGERS DE AUDITORÍA: SCRIPT DE DEMOSTRACIÓN
--- Proyecto : Estilo Urbano - Equipo 57 - Bases de Datos I
---
 -- Requiere (en este orden):
 --   1) sql/ddl/crear_bd.sql
 --   2) sql/dml/datos_prueba.sql        (se usan PRENDA 1001/1002, CLIENTE
 --                                       30111222 y VENTA 8 de esos datos)
 --   3) PARTE 1 de este archivo         (crea tablas y triggers)
---
--- IMPORTANTE: NO ejecutar antes sql/pruebas_de_validacion/01_pruebas.sql
--- sobre la misma base: ese script cambia el SKU 1001 a 5001 y elimina la
--- VENTA 8, y entonces estas pruebas no encontrarían esos datos. Si ya lo
--- ejecutaste, recreá la base (crear_bd.sql + datos_prueba.sql) y seguí
--- desde el paso 3.
---
--- Cómo usarlo: ejecutar cada PRUEBA por separado (seleccionar el bloque
--- y F5) y sacar captura del resultado para la documentación.
--- Las pruebas dejan los datos originales como estaban; las auditorías
--- generadas por las reversiones quedan registradas a propósito.
 -- =====================================================================
 
 USE PROYECTO;
@@ -516,13 +488,3 @@ FROM dbo.PRENDA WHERE Codigo_SKU IN (1001, 1002);
 SELECT DNI, Nombre, Telefono, Calle
 FROM dbo.CLIENTE WHERE DNI = 30111222;
 GO
-
--- =====================================================================
--- (OPCIONAL) Si necesitás borrar una venta de PRUEBA a propósito
--- (por ejemplo, para probar el ON DELETE CASCADE de 01_pruebas.sql),
--- deshabilitá el trigger y volvé a habilitarlo al terminar:
---
---   DISABLE TRIGGER dbo.trg_VENTA_BloquearDelete ON dbo.VENTA;
---   -- ... prueba ...
---   ENABLE  TRIGGER dbo.trg_VENTA_BloquearDelete ON dbo.VENTA;
--- =====================================================================
