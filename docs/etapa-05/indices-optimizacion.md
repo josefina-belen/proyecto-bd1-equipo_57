@@ -49,3 +49,5 @@ reales.
 Para el historial de un cliente, un índice sobre DNI con las columnas consultadas en INCLUDE evita el escaneo completo.
 Los índices tienen un costo: ocupan espacio adicional y los INSERT tardan más al tener que actualizarse cada uno. Conviene crear solo los
 necesarios para las consultas frecuentes.
+
+
