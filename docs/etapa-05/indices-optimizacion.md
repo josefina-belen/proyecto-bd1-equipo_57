@@ -50,4 +50,11 @@ Para el historial de un cliente, un índice sobre DNI con las columnas consultad
 Los índices tienen un costo: ocupan espacio adicional y los INSERT tardan más al tener que actualizarse cada uno. Conviene crear solo los
 necesarios para las consultas frecuentes.
 
+**Consulta sin Indices**
+<img width="1366" height="735" alt="Captura de pantalla_2026-10-30_12-31-52" src="https://github.com/user-attachments/assets/a62ab311-1987-4307-9082-580aefd80406" />
 
+**Con Indice agrupado**
+<img width="1366" height="683" alt="Captura de pantalla_2026-10-30_12-48-51" src="https://github.com/user-attachments/assets/2118b898-24a0-482c-b1ea-8b0ce851258f" />
+
+**Con indice no agrupado**
+<img width="1365" height="728" alt="Captura de pantalla_2026-10-30_12-52-13" src="https://github.com/user-attachments/assets/886d71fe-47ad-4e18-899e-aa22ae28f05d" />
