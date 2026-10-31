@@ -3,7 +3,7 @@
 ![Materia](https://img.shields.io/badge/-Base_de_Datos_I-blue)
 ![Proyecto](https://img.shields.io/badge/-Proyecto_Integrador_2026-yellow)
 ![Grupo](https://img.shields.io/badge/-Grupo_57-purple)
-![Comisión](https://img.shields.io/badge/-Comisión_3-green)
+![Comisión](https://img.shields.io/badge/-Comisión_2-green)
 
 # 👕 Estilo Urbano
 ### Sistema de Gestión de Ventas
