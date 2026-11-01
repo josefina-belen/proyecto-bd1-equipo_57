@@ -35,3 +35,25 @@ La implementación de la seguridad a nivel de base de datos se realiza mediante 
 - **`GRANT`:** otorga privilegios específicos a un usuario o rol. En nuestro sistema, se usa `GRANT SELECT` para dar permisos de lectura sobre una tabla particular, y `GRANT EXECUTE` para permitir que un usuario ejecute un Procedimiento Almacenado sin necesidad de darle acceso directo a las tablas subyacentes.
 
 En nuestro sistema, la estrategia consiste en evitar que los usuarios estándar tengan permisos de escritura directa en las tablas. A los empleados de ventas se les asigna un perfil de lectura (`db_datareader`), y cualquier inserción (como registrar un nuevo cliente o una venta) se realiza obligatoriamente a través de la ejecución de Procedimientos Almacenados, protegiendo así la integridad de los datos. Por otro lado, al personal de depósito se le asigna un rol personalizado que solo le permite consultar la tabla `PRENDA`.
+
+## . Caso concreto aplicado al sistema de ventas del equipo
+
+El caso de aplicación consiste en probar las restricciones de acceso al intentar agregar una nueva categoría de ropa y al consultar el catálogo de prendas.
+
+Se plantean dos situaciones principales:
+
+### Caso : Inserción de datos (Permisos de usuario)
+
+Se intenta registrar la categoría "Camperas" en el sistema. 
+
+- **Caso válido:** El administrador ejecuta la inserción directa y el registro se guarda exitosamente. Asi mismo, cuando un vendedor (que solo tiene permisos de lectura) utiliza el procedimiento almacenado `sp_InsertarCategoria`, la operación también se realiza correctamente gracias a los permisos delegados.
+- **Caso inválido:** El vendedor intenta insertar la categoría escribiendo un `INSERT` directamente en la tabla `CATEGORIA`. El sistema detecta la falta de permisos de escritura, genera un error y bloquea la operación.
+
+### Caso : Lectura de catálogo (Permisos por rol)
+
+Se intenta visualizar el stock disponible en la tabla `PRENDA`.
+
+- **Caso válido:** Un empleado de depósito, que fue asignado al rol personalizado `Rol_Lector_Catalogo`, ejecuta la consulta y el sistema le devuelve los datos sin problemas.
+- **Caso inválido:** Un empleado de otra área, que no pertenece a dicho rol, intenta ejecutar la misma consulta. El sistema le deniega el acceso y muestra un error en pantalla.
+
+Estos ejemplos demuestran cómo el motor de base de datos protege la información, evitando que usuarios no autorizados lean o modifiquen datos directamente en las tablas.
