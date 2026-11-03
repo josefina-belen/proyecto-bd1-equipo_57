@@ -22,6 +22,11 @@
 - **Incorporación de TRY/CATCH** para capturar errores y controlar la reversión de las operaciones.
 - **Validación de disponibilidad de stock**, utilizando `UPDLOCK` para proteger la lectura del inventario durante la operación.
 
+ [Transacciones Descripcion](https://github.com/josefina-belen/proyecto-bd1-equipo_57/blob/main/docs/etapa-05/transacciones.md#transacciones-en-sql-server-control-de-stock-en-un-sistema-de-ventas)
+
+ [Transacciones SQL](https://github.com/josefina-belen/proyecto-bd1-equipo_57/blob/main/sql/tecnico/transacciones/transacciones.sql) 
+
+
 ## Problemas o dificultades identificadas
 
 Al principio, me costó comprender la diferencia entre COMMIT y ROLLBACK, especialmente identificar en qué momento correspondía confirmar los cambios realizados y cuándo era necesario revertirlos ante un error.
