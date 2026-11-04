@@ -1,5 +1,5 @@
 
-## Contribución Individual---Etapa 05
+Contribución Individual:Etapa 05
 
 ![Equipo](https://img.shields.io/badge/Equipo-57-blue) 
 ![Integrante](https://img.shields.io/badge/Integrante-Alessandro_Sebastián_Rivero-green) 
@@ -21,7 +21,11 @@ Tuvimos dificultades con el formato del archivo Markdown, ya que al insertar los
 Para solucionar el formato, corregí la sintaxis de Markdown asegurándome de cerrar cada bloque de código con los tres acentos graves (` ``` `) justo antes de insertar las imágenes desde el celular o la PC. Para el código SQL, integré las correcciones de mi compañera, adaptando todas las pruebas a `EXECUTE AS USER` y organizando el documento paso a paso para que las capturas de validación y de errores (Error 229) coincidan perfectamente con la teoría.
 
 ## 5. Evidencia:
+https://github.com/josefina-belen/proyecto-bd1-equipo_57/blob/main/sql/tecnico/seguridad/pruebas_seguridad.sql
 
+https://github.com/josefina-belen/proyecto-bd1-equipo_57/blob/main/sql/tecnico/seguridad/crear_usuarios_y_roles.sql
+
+https://github.com/josefina-belen/proyecto-bd1-equipo_57/blob/main/docs/etapa-05/seguridad.md
 
 ## 6. Reflexión Individual:
 En esta etapa comprendí la importancia crítica de la seguridad en bases de datos y la diferencia entre un Login (servidor) y un Usuario (base de datos). Aprendí cómo los Roles facilitan la administración y cómo los Procedimientos Almacenados son herramientas fundamentales, no solo para programar lógica, sino para proteger la integridad del sistema frente a modificaciones directas no autorizadas.
