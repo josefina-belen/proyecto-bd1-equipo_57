@@ -32,9 +32,33 @@ El proyecto busca aplicar los fundamentos del diseño y la implementación de ba
  
  [Objetivos](https://github.com/josefina-belen/proyecto-bd1-equipo_57#descripci%C3%B3n-del-proyecto)
  
-  [Alcance](https://github.com/josefina-belen/proyecto-bd1-equipo_57#alcance-funcional)
+ [Alcance](https://github.com/josefina-belen/proyecto-bd1-equipo_57#alcance-funcional)
 
----
+[Fuera de alcance](#fuera-del-alcance)
+  
+[Modelo de datos](#modelo-de-datos)
+
+[Diagrama](#diagrama-entidad-relación)
+
+[Modelo Relacional](#modelo-relacional)
+
+[Normalización](#normalización)
+
+[Tecnologías](#tecnologías)
+
+[Estructura del Repositorio](#estructura-del-repositorio)
+
+[Instalanción y Ejecución](#instalación-y-ejecución)
+
+[Integridad y Reglas](#integridad-y-reglas-de-negocio)
+
+[Pruebas y Validación](#pruebas-y-validación)
+
+[Documentación](#documentación)
+
+[Estado del Proyecto](#estado-del-proyecto)
+
+[Equipo](#equipo-de-trabajo)
 
 ## Descripción del proyecto
 
