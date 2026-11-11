@@ -22,6 +22,7 @@ con `EXEC`, el motor ejecuta la tarea directo pasando solo los parámetros, lo q
 # 1. Funciones
 -**Funcion:** Concatenar el nombre y apellido
 -**Problema de negocio:** El sistema necesita mostrar el nombre de los clientes siempre con el mismo formato ("Apellido, Nombre") en todas las facturas, reportes e historiales de ventas.
+
 -**Funcion Propuesta:**
 <img width="524" height="17" alt="image" src="https://github.com/user-attachments/assets/dcfe6fea-7bd0-4c2a-9853-add326d8137e" />
 
@@ -29,6 +30,7 @@ con `EXEC`, el motor ejecuta la tarea directo pasando solo los parámetros, lo q
 
 -**Funcion:** para contar la cantidad total de compras (facturas) de un cliente
 -**Problema de negocio:** Conocer rápidamente qué tan frecuente es un cliente contando cuántas facturas o compras tiene registradas a su nombre.
+
 -**Funcion Propuesta:** 
 <img width="313" height="26" alt="image" src="https://github.com/user-attachments/assets/723e3322-f501-4376-978c-9fd953209e35" />
 
@@ -36,6 +38,7 @@ con `EXEC`, el motor ejecuta la tarea directo pasando solo los parámetros, lo q
 
 -**Funcion:** Calcular el monto total histórico gastado por un cliente
 -**Problema de negocio:** Saber cuánta plata lleva gastada un cliente en el historial del local para evaluar su nivel de consumo o futuros beneficios
+
 -**Funcion Propuesta:** 
 <img width="290" height="21" alt="image" src="https://github.com/user-attachments/assets/ebfdc264-4f35-4683-a20a-9a42aae7c258" />
 
@@ -50,7 +53,7 @@ con `EXEC`, el motor ejecuta la tarea directo pasando solo los parámetros, lo q
 **Procedimiento: Registrar un nuevo cliente**
 - **Problema de negocio:** Dar de alta a un cliente asegurando que se carguen todos sus datos obligatorios de contacto y dirección de una sola vez, sin tocar la tabla directamente.
 - **Procedimiento propuesto:**
-  <img width="174" height="19" alt="image" src="https://github.com/user-attachments/assets/9c4194e4-b999-453a-a714-b3dc4f301ebf" />
+-  <img width="174" height="19" alt="image" src="https://github.com/user-attachments/assets/9c4194e4-b999-453a-a714-b3dc4f301ebf" />
 - **Tareas que realiza:**
   1. Recibe por parámetro el DNI, nombre, apellido, localidad, teléfono, calle y altura.
   2. Inserta el registro completo en la tabla `CLIENTE`.
@@ -68,7 +71,7 @@ con `EXEC`, el motor ejecuta la tarea directo pasando solo los parámetros, lo q
 **Procedimiento: Eliminar un cliente**
 - **Problema de negocio:** Dar de baja del sistema a un cliente específico de forma rápida y controlada usando únicamente su número de documento.
 - **Procedimiento propuesto:**
-  <img width="157" height="17" alt="image" src="https://github.com/user-attachments/assets/d7013a38-d947-4fc0-8026-7f3bd8bdf85e" />
+- <img width="157" height="17" alt="image" src="https://github.com/user-attachments/assets/d7013a38-d947-4fc0-8026-7f3bd8bdf85e" />
 - **Tareas que realiza:**
   1. Filtra la tabla `CLIENTE` por el DNI recibido.
   2. Elimina la fila correspondiente.
