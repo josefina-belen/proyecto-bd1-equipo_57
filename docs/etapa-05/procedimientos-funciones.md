@@ -71,5 +71,11 @@ con `EXEC`, el motor ejecuta la tarea directo pasando solo los parámetros, lo q
   2. Elimina la fila correspondiente.
 - **Beneficio:** Simplifica la baja de registros encapsulando el `DELETE` para que no se ejecuten borrados manuales peligrosos sobre la tabla.
 
+## Script de demostracion
+<img width="1315" height="589" alt="image" src="https://github.com/user-attachments/assets/e0b3c581-e420-4116-ac5b-540145d949f0" />
+
+## Ejecucion
+<img width="1315" height="587" alt="image" src="https://github.com/user-attachments/assets/ed0e75b6-d429-4fad-8480-8a592ce92d1b" />
+
 
 
